@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carbon Footprint Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .form-submit-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    .form-submit-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Footprint Calculator</h1>
+  <div class="form-container">
+    <form action="/submit" method="post">
+      <div class="form-group">
+        <label class="form-label" for="electricity">Electricity (kWh)</label>
+        <input class="form-input" type="number" id="electricity" name="electricity" step="0.01" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label" for="heatingOil">Heating Oil (liters)</label>
+        <input class="form-input" type="number" id="heatingOil" name="heatingOil" step="0.01" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label" for="coal">Coal (kg)</label>
+        <input class="form-input" type="number" id="coal" name="coal" step="0.01" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label" for="lpg">LPG (liters)</label>
+        <input class="form-input" type="number" id="lpg" name="lpg" step="0.01" required>
+      </div>
+      
+      <input class="form-submit-button" type="submit" name="Calculate" value="Calculate">
+    </form>
+  </div>
+</body>
+</html>

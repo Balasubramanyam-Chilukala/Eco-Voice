@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="chatbox" style="border: 2px solid black; border-radius: 20px; margin-bottom: 10px;">
+    <ul>
+        <% for (const message of chatHistory) { %>
+          <li>
+            <%- message.role %>: <%- message.parts[0].text %>
+          </li>
+          <hr>
+        <% } %>
+      </ul>    
+    </div>  
+
+        <form action="/chat" method="post">
+            <input type="text" name="message" placeholder="Type your message">
+            <button type="submit">Send</button>
+          </form>
+</body>
+</html>

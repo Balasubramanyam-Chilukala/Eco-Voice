@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 3px solid black; padding: 10px; margin-top: 10px; margin-bottom: 10px; border-radius: 20px;">
+    <h1>Your Carbon footprint is <%=obj.footp %></h1>
+
+    <h1>About your carbon footprint :</h1>
+    <p><%=obj.a%></p>
+    <h3>If you have any further questions or you need any suggestions. Please enter below :</h3>
+    <div style="margin-left: 450px; width: 800px;">
+    <form action="/chat" method="post">
+        <input type="text" name="message" placeholder="Enter your question" style="height: 20px; width: 190px; border-radius: 10px;">
+        <button type="submit" style="height: 20px; width: 80px;">Send</button>
+      </form>
+    </div>
+      <h2>Carbon Footprint Table</h2>
+
+<table style="border: 1px solid black; width: 100%;">
+    <tr>
+        <th style="border: 1px solid black;">Factor</th>
+        <th style="border: 1px solid black;">Unit</th>
+        <th style="border: 1px solid black;">Low Range (kg CO₂/unit)</th>
+        <th style="border: 1px solid black;">Medium Range (kg CO₂/unit)</th>
+        <th style="border: 1px solid black;">High Range (kg CO₂/unit)</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">Electricity</td>
+        <td style="border: 1px solid black;">kWh</td>
+        <td style="border: 1px solid black;">100</td>
+        <td style="border: 1px solid black;">50</td>
+        <td style="border: 1px solid black;">100</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">LPG</td>
+        <td style="border: 1px solid black;">Liter</td>
+        <td style="border: 1px solid black;">150</td>
+        <td style="border: 1px solid black;">200</td>
+        <td style="border: 1px solid black;">250</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">Heating Oil</td>
+        <td style="border: 1px solid black;">Liter</td>
+        <td style="border: 1px solid black;">260</td>
+        <td style="border: 1px solid black;">270</td>
+        <td style="border: 1px solid black;">290</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">Coal</td>
+        <td style="border: 1px solid black;">kg</td>
+        <td style="border: 1px solid black;">240</td>
+        <td style="border: 1px solid black;">290</td>
+        <td style="border: 1px solid black;">330</td>
+    </tr>
+    
+</table>  
+</div>  
+</body>
+</html>
